@@ -43,11 +43,7 @@ class Task {
     }
 
     static findByTitle(title){
-        if (Task.allTasks.includes(title)){
-            Task.allTasks.find((el) => el === title)
-        } else {
-            return undefined
-        }
+        return this.allTasks.find((task) => task.title === title)
     }
 }
 
